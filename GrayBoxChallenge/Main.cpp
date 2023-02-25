@@ -1,3 +1,4 @@
+#include "CClause.h"
 #include "CMax3SatProblem.h"
 #include "CGAOptimizer.h"
 #include "Timer.h"
@@ -54,10 +55,9 @@ void vRunExperiment(CMax3SatProblem *pcMax3SatProblem)
 
 void main(int iArgCount, char **ppcArgValues)
 {
-	CMax3SatProblem  c_max3satproblem;
-
+	CMax3SatProblem  c_max3satproblem;		
 	if (c_max3satproblem.bLoad("m3s_350_0.txt") == true)
-	{
+	{				
 		cout << c_max3satproblem.iGetNumberClauses() << endl;
 		vRunExperiment(&c_max3satproblem);
 	}
